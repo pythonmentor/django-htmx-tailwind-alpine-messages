@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="px-6 py-6">
+    <h1 class="text-4xl font-bold">Bienvenue sur mon exemple</h1>
+    {% include "partials/hx_task_create_button.html" %}
+    {% include "partials/hx_task_list.html" %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,7 @@
+<ul id="list-tasks" hx-swap-oob="true" class="mt-8 {% if tasks %}list-disc list-inside{% endif %}">
+    {% for task in tasks %}
+    <li>{{ task.title }}</li>
+    {% empty %}
+    <li>Vous n'avez pas encore ajouté de tâche</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+{% load crispy_forms_tags %}
+
+<div id="create-task" class="mt-4">
+    <form hx-post="{% url 'example:task-create' %}" hx-target="#create-task" hx-swap="outerHTML">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="flex space-x-2">
+            <button class="border-2 border-amber-600 hover:border-amber-800 text-amber-600 hover:text-amber-800 p-2 rounded-lg" hx-get="{% url 'example:task-cancel' %}" hx-target="#create-task" hx-swap="outerHTML">Abandonner</button>
+            <button class="border-2 border-amber-600 hover:border-amber-800 bg-amber-600 hover:bg-amber-800 text-white p-2 rounded-lg" type="submit">Créer</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+[project]
+name = "Exemple"
+version = "0.1.0"
+description = "Démo pour montrer comment utiliser les messages de django avec htmx"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "crispy-tailwind>=1.0.3",
+    "django>=5.1.2",
+    "django-extensions>=3.2.3",
+]
